@@ -35,7 +35,7 @@ const Projects = () => {
                 {project.image ? (
                   <img src={project.image} alt={project.title} />
                 ) : (
-                  <h4>Image not available</h4>
+                  <h4>{project.title}</h4>
                 )}
               </div>
               <div className="project-content">
