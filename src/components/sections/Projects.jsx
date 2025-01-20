@@ -32,7 +32,11 @@ const Projects = () => {
           {filteredProjects.map(project => (
             <div key={project.id} className="project-card">
               <div className="project-image">
-                <img src={project.image} alt={project.title} />
+                {project.image ? (
+                  <img src={project.image} alt={project.title} />
+                ) : (
+                  <h4>Image not available</h4>
+                )}
               </div>
               <div className="project-content">
                 <h3>{project.title}</h3>
@@ -45,22 +49,26 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="project-links">
-                  <a 
-                    href={project.githubLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-btn github"
-                  >
-                    GitHub
-                  </a>
-                  <a 
-                    href={project.liveLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-btn live"
-                  >
-                    Live Demo
-                  </a>
+                  {project.githubLink && (
+                    <a 
+                      href={project.githubLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="project-btn github"
+                    >
+                      GitHub
+                    </a>
+                  )}
+                  {project.liveLink && (
+                    <a 
+                      href={project.liveLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="project-btn live"
+                    >
+                      Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
