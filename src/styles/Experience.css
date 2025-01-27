@@ -121,27 +121,3 @@
     left: -40px !important;
   }
 }
-
-.frontend-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.frontend-item {
-  margin-bottom: 20px;
-}
-
-.frontend-item h3 {
-  font-size: 1.5rem;
-  color: #007bff;
-}
-
-.frontend-item h4 {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.frontend-item p {
-  margin: 5px 0;
-}

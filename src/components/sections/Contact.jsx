@@ -114,7 +114,7 @@ const Contact = () => {
               <i className="email-icon">✉</i>
               <div className="contact-info-text">
                 <h3>Email</h3>
-                <p>walihaider4699@gmail.com</p>
+                <p>walihaiderofficial@outlook.com</p>
               </div>
             </div>
             <div className="contact-info-item">

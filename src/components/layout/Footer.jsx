@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/Footer.css';
+import { heroData } from '../../store/heroData';
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +33,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <h3>About Me</h3>
-            <p>DevOps Engineer specializing in CISCO Pipeline Management, Cloud Integration, and Network Engineering.</p>
+            <p>{heroData.description}</p>
           </div>
 
           <div className="footer-section">

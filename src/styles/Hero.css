@@ -70,7 +70,10 @@
 }
 
 .primary-btn:hover, .secondary-btn:hover {
-  transform: translateY(-3px);
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-5px);
+  /* transform: translateY(-3px); */
 }
 
 @keyframes fadeInUp {
