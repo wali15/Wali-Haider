@@ -52,6 +52,7 @@ textarea {
 }
 
 .submit-btn {
+  position: relative;
   width: 100%;
   padding: 1rem;
   background: var(--primary-color);
@@ -60,11 +61,46 @@ textarea {
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.submit-btn:hover {
-  transform: translateY(-3px);
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disable form inputs during loading */
+input:disabled,
+textarea:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Loading state hover effect */
+.submit-btn.loading:hover {
+  transform: none;
 }
 
 .contact-info-item {
@@ -206,4 +242,39 @@ textarea {
 /* When contact is the last section before footer */
 section.contact:last-of-type {
   padding-bottom: 2rem;
+}
+
+/* Toast customization for dark mode */
+:root {
+  --toastify-color-dark: var(--card-bg);
+  --toastify-color-success: #4caf50;
+  --toastify-color-error: #f44336;
+  --toastify-text-color-dark: var(--text-color);
+}
+
+/* Custom toast styles */
+.Toastify__toast {
+  border-radius: 8px !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+.Toastify__toast--success {
+  background: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.Toastify__toast--error {
+  background: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.Toastify__progress-bar {
+  background: var(--primary-color) !important;
+}
+
+.Toastify__close-button {
+  color: var(--text-color) !important;
+  opacity: 0.7;
 } 

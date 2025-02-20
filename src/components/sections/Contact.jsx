@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import Toast from '../shared/Toast';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { MdEmail, MdPhone } from 'react-icons/md';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import '../../styles/Contact.css';
@@ -13,7 +14,6 @@ const Contact = () => {
     message: ''
   });
   const [isLoading, setIsLoading] = useState(false);
-  const [toast, setToast] = useState({ show: false, type: '', message: '' });
   const isStandalone = window.location.pathname === '/contact';
 
   const handleChange = (e) => {
@@ -34,6 +34,9 @@ const Contact = () => {
     };
     
     try {
+      // Simulate API call with timeout
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
       const result = await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -42,10 +45,14 @@ const Contact = () => {
       );
 
       if (result.text === 'OK') {
-        setToast({
-          show: true,
-          type: 'success',
-          message: 'Message sent successfully! Thank you for reaching out.'
+        toast.success('Message sent successfully! Thank you for reaching out.', {
+          position: "top-right",
+          autoClose: 3000,
+          theme: "dark",
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
         });
         setFormData({
           user_name: '',
@@ -54,11 +61,14 @@ const Contact = () => {
         });
       }
     } catch (error) {
-      console.error('EmailJS Error:', error);
-      setToast({
-        show: true,
-        type: 'error',
-        message: 'Failed to send message. Please try again.'
+      toast.error('Failed to send message. Please try again.', {
+        position: "top-right",
+        autoClose: 3000,
+        theme: "dark",
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
       });
     } finally {
       setIsLoading(false);
@@ -68,13 +78,6 @@ const Contact = () => {
   return (
     <div className={isStandalone ? "page-wrapper" : ""}>
       <section className="contact" id="contact">
-        {toast.show && (
-          <Toast
-            type={toast.type}
-            message={toast.message}
-            onClose={() => setToast({ ...toast, show: false })}
-          />
-        )}
         <div className="contact-container">
           <h2>Get In Touch</h2>
           <div className="contact-content">
@@ -87,6 +90,7 @@ const Contact = () => {
                   value={formData.user_name}
                   onChange={handleChange}
                   required
+                  disabled={isLoading}
                 />
               </div>
               <div className="form-group">
@@ -97,6 +101,7 @@ const Contact = () => {
                   value={formData.user_email}
                   onChange={handleChange}
                   required
+                  disabled={isLoading}
                 />
               </div>
               <div className="form-group">
@@ -106,10 +111,18 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  disabled={isLoading}
                 ></textarea>
               </div>
-              <button type="submit" className="submit-btn" disabled={isLoading}>
-                {isLoading ? <span className="loading-spinner"></span> : 'Send Message'}
+              <button type="submit" className={`submit-btn ${isLoading ? 'loading' : ''}`} disabled={isLoading}>
+                {isLoading ? (
+                  <div className="button-content">
+                    <span className="spinner"></span>
+                    <span>Sending...</span>
+                  </div>
+                ) : (
+                  'Send Message'
+                )}
               </button>
             </form>
 
@@ -154,6 +167,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <ToastContainer />
     </div>
   );
 };
