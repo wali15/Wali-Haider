@@ -11,7 +11,7 @@ const Hero = () => {
         <p>{heroData.description}</p>
         <div className="cta-buttons">
           <Link to="/resume" className="primary-btn">View My Resume</Link>
-          <a href="/contact" className="secondary-btn">Contact Me</a>
+          <Link to="/contact" className="secondary-btn">Contact Me</Link>
         </div>
       </div>
     </section>

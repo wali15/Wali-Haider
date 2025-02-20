@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/Footer.css';
 import { heroData } from '../../store/heroData';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,45 +35,75 @@ const Footer = () => {
           <div className="footer-section">
             <h3>About Me</h3>
             <p>{heroData.description}</p>
+            <div className="footer-buttons">
+              <Link to="/contact" className="modern-button primary">
+                Contact Me
+              </Link>
+              <Link to="/resume" className="modern-button secondary">
+                Resume
+              </Link>
+            </div>
           </div>
 
           <div className="footer-section">
             <h3>Quick Links</h3>
             <ul className="footer-links">
-              <li><Link to="/#about">About</Link></li>
-              <li><Link to="/#skills">Skills</Link></li>
-              <li><Link to="/#projects">Projects</Link></li>
-              <li><Link to="/#experience">Experience</Link></li>
-              <li><Link to="/#contact">Contact</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/skills">Skills</Link></li>
+              <li><Link to="/projects">Projects</Link></li>
+              <li><Link to="/experience">Experience</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h3>Contact Info</h3>
-            <ul className="footer-links">
-              <li><a href="mailto:walihaider4699@gmail.com">walihaider4699@gmail.com</a></li>
-              <li><a href="tel:+923467002245">+92 346 7002245</a></li>
-            </ul>
-            <div className="social-links">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-                GitHub
-              </a>
-              <a href="https://linkedin.com/in/wali-haider4699" target="_blank" rel="noopener noreferrer">
-                LinkedIn
-              </a>
+            <div className="contact-details">
+              <p><strong>Email:</strong> walihaider4699@gmail.com</p>
+              <p><strong>Phone:</strong> +92 346 7002245</p>
+              <div className="social-buttons">
+                <a 
+                  href="https://github.com/wali15" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-button github"
+                >
+                  <FaGithub />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/wali-haider-6497a5251/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-button linkedin"
+                >
+                  <FaLinkedin />
+                </a>
+                <a 
+                  href="https://www.instagram.com/wali.dev_" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-button instagram"
+                >
+                  <FaInstagram />
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Wali Haider. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {heroData.name}. All rights reserved.</p>
         </div>
       </div>
 
       {isVisible && (
-        <div className="scroll-to-top" onClick={scrollToTop}>
+        <button 
+          className="scroll-to-top"
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+        >
           ↑
-        </div>
+        </button>
       )}
     </footer>
   );

@@ -13,7 +13,7 @@ export const projectsData = [
     title: "Doctor Ikram",
     description: "Managed Doctor Ikram's WordPress site by taking backups from production, setting up an on-premises development environment without impacting production, and migrating the updated version back to production seamlessly.",
     technologies: ["Wordpress Management", "Wordpress Deployment", "DevOps"],
-    image: "https://scontent.fkhi17-1.fna.fbcdn.net/v/t39.30808-1/244657896_4702033403154325_3506178244146985733_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=kZbtFfNkYI4Q7kNvgHzIEZp&_nc_oc=AdjZCbbyJReWDKarDCUFGhdFB18TJJIBJbGXSktaeUu78iQizqu3FkFcpHHd57tgTec&_nc_zt=24&_nc_ht=scontent.fkhi17-1.fna&_nc_gid=AIkre9a5X6oaDJeiE8TA3im&oh=00_AYBtuBPSncGpUOMqt-qmb1tCYRpRP5yUrYZmF9pxrLYXYA&oe=67903FF9",
+    image: "/Projects/DI.jpg",
     liveLink: "https://doctorikram.com/",
     category: "DevOps Projects"
   },
@@ -22,6 +22,7 @@ export const projectsData = [
     title: "Wahaaj Ali",
     description: "Set up a development environment for Syed Wahaaj Ali's WordPress site, managed updates and backups during development, and successfully migrated it to production, ensuring reliable performance.",
     technologies: ["Wordpress Management", "Wordpress Deployment", "DevOps"],
+    image: "/Projects/SyedWahaaj.jpg",
     liveLink: "https://wahaajali.com/",
     category: "DevOps Projects"
   },
@@ -30,7 +31,7 @@ export const projectsData = [
     title: "Nafri",
     description: "Designed, developed, and managed the Nafri application, leveraging Docker for containerized deployment. Built efficient backend services using .NET, optimized database interactions with MongoDB and MySQL, and ensured seamless scalability and reliability through robust containerization strategies.",
     technologies: [".Net", "Nodejs", "MySQL", "MongoDB", "Docker"],    
-    image: "https://nafri.dev.rizsolutions.com/src/assets/Favicon/android192x192.png ",
+    image: "/Projects/Nafri.jpg",
     liveLink: "https://nafri.dev.rizsolutions.com/",
     category: "DevOps Projects"
   },
@@ -39,7 +40,8 @@ export const projectsData = [
     title: "The Art Convergence",
     description: "The Art Convergence is a platform for artists to showcase their work and connect with art enthusiasts. It features a user-friendly interface, responsive design.",
     technologies: ["React", "Vite", "CSS3", "JavaScript"],
-    image: "https://scontent.fkhi17-2.fna.fbcdn.net/v/t39.30808-6/471310873_122127619412524634_5081531614989454655_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=c5Z09REtCPcQ7kNvgFBacCg&_nc_oc=AdhahXDMre0XJPXcpugJV1KnWtzzH9uo8RyOJGB1126524WL6qpL8xc6fmy1Uzp6xAc&_nc_zt=23&_nc_ht=scontent.fkhi17-2.fna&_nc_gid=AVXm01_R_qc4OrPYaDirvkY&oh=00_AYDg40Ry3FNg1BHZbnv-yCckC9XSGaoVbxT9Rz1fNbN6rg&oe=67905C56",
+    image:"/Projects/TAC.jpg",
+    // image: "https://artconvergence.netlify.app/Media/the-art-convergence-high-resolution-logo.jpeg",
     githubLink: "https://github.com/yourusername/sysadmin-dashboard",
     liveLink: "https://artconvergence.netlify.app/",
     category: "Frontend Projects"

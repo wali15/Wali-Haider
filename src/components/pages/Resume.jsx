@@ -2,31 +2,19 @@ import { useState } from 'react';
 import '../../styles/Resume.css';
 
 const Resume = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  const handleLoad = () => {
-    setIsLoading(false);
-  };
-
+  const isStandalone = window.location.pathname === '/resume';
+  
   return (
-    <div className="resume-page">
-      <div className="resume-container">
-        {isLoading && (
-          <div className="loading-spinner-container">
-            <div className="loading-spinner"></div>
-            <p>Loading Resume...</p>
-          </div>
-        )}
-        <div className="pdf-wrapper">
+    <div className={isStandalone ? "page-wrapper" : ""}>
+      <section className="resume" id="resume">
+        <div className="resume-container">
           <iframe
-            src="https://drive.google.com/file/d/1Z8G9xFimZTi4o3SiKBs-f5wzm71kVVOi/preview?usp=drivesdk"
+            src="/SyedWaliHaiderResume.pdf"
             title="Resume"
-            className="pdf-viewer"
-            frameBorder="0"
-            onLoad={handleLoad}
+            className="resume-frame"
           />
         </div>
-      </div>
+      </section>
     </div>
   );
 };

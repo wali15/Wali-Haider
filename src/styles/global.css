@@ -1,11 +1,37 @@
 :root {
+  /* Light theme */
   --primary-color: #007bff;
   --secondary-color: #6c757d;
   --background-color: #ffffff;
-  --text-color: #333333;
-  --accent-color: #17a2b8;
-  --success-color: #28a745;
-  --section-padding: 5rem 0;
+  --text-color: #333333;  /* Dark text for light mode */
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-text: #333;
+  --nav-link-color: #333;
+  --nav-link-hover: #007bff;
+  --card-bg: #ffffff;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-color: #e0e0e0;
+  --section-bg: #f8f9fa;
+  --hover-bg: #f0f0f0;
+  --timeline-line: #e0e0e0;
+}
+
+[data-theme='dark'] {
+  /* LinkedIn Dark theme */
+  --primary-color: #0a66c2;  /* LinkedIn blue */
+  --secondary-color: #a8b3bd;
+  --background-color: #1d2226;  /* LinkedIn dark background */
+  --text-color: #ffffff;
+  --nav-bg: rgba(29, 34, 38, 0.95);  /* LinkedIn nav background */
+  --nav-text: #ffffff;
+  --nav-link-color: #ffffff;
+  --nav-link-hover: #0a66c2;
+  --card-bg: #283339;  /* LinkedIn card background */
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --border-color: #38434f;  /* LinkedIn border color */
+  --section-bg: #1d2226;
+  --hover-bg: #384047;  /* LinkedIn hover state */
+  --timeline-line: #38434f;
 }
 
 * {
@@ -14,29 +40,129 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  display: contents;
   color: var(--text-color);
-  overflow-x: hidden;
+  background-color: var(--background-color);
+  transition: all 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 section {
-  padding: var(--section-padding);
+  background-color: var(--section-bg);
+  color: var(--text-color);
+  padding: 4rem 0;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
-  section {
-    padding: 3rem 0;
+  :root {
+    --section-padding: 2rem 1rem;
   }
+  
   body {
-  display: flex;
+    overflow-x: hidden;
   }
+
+  section {
+    padding: 2rem 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    padding: 0 1rem;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+    word-wrap: break-word;
+  }
+  
+  h2 {
+    font-size: 1.8rem !important;
+    word-wrap: break-word;
+  }
+  
+  h3 {
+    font-size: 1.5rem !important;
+    word-wrap: break-word;
+  }
+  
+  .page-wrapper {
+    padding-top: 60px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Fix for horizontal scroll */
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .app {
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 1.5rem 0;
+  }
+  
+  .container {
+    padding: 0 0.8rem;
+  }
+}
+
+/* Update scrollbar colors for dark mode */
+[data-theme='dark'] ::-webkit-scrollbar-track {
+  background: rgba(45, 45, 45, 0.5);
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #4dabf7 0%, #2d9cdb 50%, #4dabf7 100%);
+}
+
+/* Add after your existing styles */
+.page-wrapper {
+  padding-top: 80px; /* Height of navbar */
+  min-height: 100vh;
+  background: var(--background-color);
+}
+
+section {
+  background-color: var(--section-bg);
+  color: var(--text-color);
+  padding: 4rem 0;
+  transition: all 0.3s ease;
+  width: 100%;
 } 

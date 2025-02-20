@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ theme, setTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -39,6 +39,10 @@ const Navbar = () => {
     document.body.removeChild(link);
   };
 
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
@@ -46,6 +50,10 @@ const Navbar = () => {
           Syed Wali Haider
         </Link>
         
+        <div className="theme-toggle" onClick={toggleTheme}>
+          {theme === 'light' ? '🌙' : '☀️'}
+        </div>
+
         <div className="hamburger" onClick={toggleMenu}>
           <span className={`bar ${isOpen ? 'active' : ''}`}></span>
           <span className={`bar ${isOpen ? 'active' : ''}`}></span>
