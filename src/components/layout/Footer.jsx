@@ -82,7 +82,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="social-button github"
                 >
-                  <FaGithub /> GitHub
+                  <FaGithub />
                 </a>
                 <a 
                   href="https://linkedin.com/in/yourusername" 
@@ -90,7 +90,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="social-button linkedin"
                 >
-                  <FaLinkedin /> LinkedIn
+                  <FaLinkedin />
                 </a>
                 <a 
                   href="https://instagram.com/yourusername" 
@@ -98,7 +98,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="social-button instagram"
                 >
-                  <FaInstagram /> Instagram
+                  <FaInstagram />
                 </a>
               </div>
             </div>
