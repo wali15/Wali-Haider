@@ -2,6 +2,7 @@
   background: var(--section-bg);
   padding: var(--section-padding);
   color: var(--text-color);
+  margin-bottom: 2rem;
 }
 
 .skills-container {
@@ -75,6 +76,7 @@
   color: var(--text-color);
   min-height: 100vh;
   padding: 100px 0;
+  margin-bottom: 2rem;
 }
 
 .skills-section {
