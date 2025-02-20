@@ -42,7 +42,6 @@ export const projectsData = [
     technologies: ["React", "Vite", "CSS3", "JavaScript"],
     image:"/Projects/TAC.jpg",
     // image: "https://artconvergence.netlify.app/Media/the-art-convergence-high-resolution-logo.jpeg",
-    githubLink: "https://github.com/yourusername/sysadmin-dashboard",
     liveLink: "https://artconvergence.netlify.app/",
     category: "Frontend Projects"
   },
@@ -51,7 +50,6 @@ export const projectsData = [
     title: "Wali Haider",
     description: "Personal website for Me, showcasing my work and services.",
     technologies: ["React", "Vite", "CSS3", "JavaScript"],
-    githubLink: "https://github.com/yourusername/sysadmin-dashboard",
     category: "Frontend Projects"
   }
 ];
