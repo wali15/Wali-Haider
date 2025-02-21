@@ -77,7 +77,7 @@ const Footer = () => {
               <p><strong>Phone:</strong> +92 346 7002245</p>
               <div className="social-buttons">
                 <a 
-                  href="https://github.com/yourusername" 
+                  href="https://github.com/wali15" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="social-button github"
@@ -85,7 +85,7 @@ const Footer = () => {
                   <FaGithub />
                 </a>
                 <a 
-                  href="https://linkedin.com/in/yourusername" 
+                  href="https://www.linkedin.com/in/wali-haider-6497a5251/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="social-button linkedin"
@@ -93,7 +93,7 @@ const Footer = () => {
                   <FaLinkedin />
                 </a>
                 <a 
-                  href="https://instagram.com/yourusername" 
+                  href="https://www.instagram.com/wali.dev_" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="social-button instagram"
