@@ -4,7 +4,7 @@ export const projectsData = [
     title: "Riz Solutions",
     description: "Set up a development environment for Riz Solutions WordPress site, managed updates and backups during development, and successfully migrated it to production, ensuring reliable performance.",
     technologies: ["Wordpress Management", "Wordpress Deployment", "DevOps"],
-    image: "https://media.licdn.com/dms/image/v2/D4D0BAQHMznKNyO1yFw/company-logo_200_200/company-logo_200_200/0/1736123610202/riz_solutions_pvt_ltd_logo?e=1745452800&v=beta&t=ZcYWE4teKpNmvmmHpHkfQyv9tVr897VUCqepj-LHyXA",
+    image: "/Projects/RizSolutions.jpg",
     liveLink: "https://rizsolutions.com/",
     category: "DevOps Projects"
   },
