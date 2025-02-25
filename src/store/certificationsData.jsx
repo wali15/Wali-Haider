@@ -11,7 +11,7 @@ export const certificationsData = [
       category: "Cloud",
       description: "Job Roles in Cloud",
       imageUrl: "/Certs/JobRolesInCloud.jpg",
-      pdfUrl: "path/to/certificate2.pdf",
+      pdfUrl: "/Certs/PDFs/Job_role_in_cloud.pdf",
     },
     {
       title: "Linux",

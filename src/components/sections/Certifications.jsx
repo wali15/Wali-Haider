@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { certificationsData } from '../../store/certificationsData';
-import Modal from './Modal.jsx';
+import Modal from '../sections/Modal.jsx';
 import '../../styles/Certifications.css';
 
 const Certifications = () => {
@@ -33,14 +33,9 @@ const Certifications = () => {
                             <p className="category">{certification.category}</p>
                             <p>{certification.description}</p>
                             {certification.pdfUrl && (
-                                <a
-                                    href={certification.pdfUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="view-pdf"
-                                >
-                                    View Certificate
-                                </a>
+                                <a href={`/pdf-viewer/${encodeURIComponent(certification.pdfUrl)}`} rel="noopener noreferrer" className="view-pdf">
+                                View PDF
+                              </a>
                             )}
                         </div>
                     </div>
