@@ -33,7 +33,7 @@ const Certifications = () => {
                             <p className="category">{certification.category}</p>
                             <p>{certification.description}</p>
                             {certification.pdfUrl && (
-                                <a href={`/pdf-viewer/${encodeURIComponent(certification.pdfUrl)}`} rel="noopener noreferrer" className="view-pdf">
+                                <a href={`/pdf-viewer/${encodeURIComponent(certification.pdfUrl)}`} target="_blank" rel="noopener noreferrer" className="view-pdf">
                                 View PDF
                               </a>
                             )}

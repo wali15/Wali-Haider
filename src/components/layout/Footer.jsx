@@ -63,10 +63,11 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Quick Links</h3>
             <ul className="footer-links">
-              <li><Link to="/about" onClick={handleLinkClick}>About</Link></li>
+              {/* <li><Link to="/about" onClick={handleLinkClick}>About</Link></li> */}
               <li><Link to="/skills" onClick={handleLinkClick}>Skills</Link></li>
               <li><Link to="/projects" onClick={handleLinkClick}>Projects</Link></li>
               <li><Link to="/experience" onClick={handleLinkClick}>Experience</Link></li>
+              <li><Link to="/certifications" onClick={handleLinkClick}>Certifications</Link></li>
             </ul>
           </div>
 
