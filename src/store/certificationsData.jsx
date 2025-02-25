@@ -1,0 +1,88 @@
+export const certificationsData = [
+    {
+      title: "AWS Cloud Practitioner",
+      category: "Cloud",
+      description: "AWS Cloud Essentials course",
+      imageUrl: "/Certs/AWS-Cloud-Practitioner.jpg",
+      pdfUrl: "/Certs/PDFs/AWS_Cloud_practitioner.pdf",
+    },
+    {
+      title: "Job Roles in the Cloud",
+      category: "Cloud",
+      description: "Job Roles in Cloud",
+      imageUrl: "/Certs/JobRolesInCloud.jpg",
+      pdfUrl: "path/to/certificate2.pdf",
+    },
+    {
+      title: "Linux",
+      category: "OS",
+      description: "Linux & its Security",
+      imageUrl: "/Certs/Linux.jpg",
+    },
+    {
+      title: "DevOps",
+      category: "DevOps",
+      description: "Fundamentals of DevOps",
+      imageUrl: "/Certs/DevOps.jpg",
+    },
+    {
+      title: "Linux CLI",
+      category: "SSH",
+      description: "Linux Command Line Interface",
+      imageUrl: "/Certs/LinuxCLI.jpg",
+    },
+    {
+      title: "Ubuntu Server",
+      category: "OS",
+      description: "Setting up a secure Ubuntu Server",
+      imageUrl: "/Certs/Ubuntu.jpg",
+    },
+    {
+      title: "React",
+      category: "JS",
+      description: "React JS Framework",
+      imageUrl: "/Certs/React.jpg",
+    },
+    {
+      title: "JavaScript",
+      category: "Programming Language",
+      description: "Advanced JavaScript",
+      imageUrl: "/Certs/JSp2.jpg",
+    },
+    {
+      title: "JavaScript",
+      category: "Programming Language",
+      description: "JavaScript Fundamentals",
+      imageUrl: "/Certs/JSp1.jpg",
+    },
+    {
+      title: "TypeScript",
+      category: "Programming Language",
+      description: "TypeScript Fundamentals",
+      imageUrl: "/Certs/TS.jpg",
+    },
+    {
+      title: "HTML & CSS",
+      category: "Frontend Development",
+      description: "Fundamentals of Frontend",
+      imageUrl: "/Certs/HtmlCss.jpg",
+    },
+    {
+      title: "OOPS Java",
+      category: "OOPS",
+      description: "Fundamentals of Object Oriented Programming",
+      imageUrl: "/Certs/OopsJava.jpg",
+    },
+    {
+      title: "Java",
+      category: "Programming Language",
+      description: "Fundamentals of Java",
+      imageUrl: "/Certs/Java.jpg",
+    },
+    {
+      title: "Python",
+      category: "Programming Language",
+      description: "Fundamentals of Python",
+      imageUrl: "/Certs/Python.jpg",
+    },
+  ];

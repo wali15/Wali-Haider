@@ -4,6 +4,7 @@ import Skills from '../sections/Skills';
 import Projects from '../sections/Projects';
 import Experience from '../sections/Experience';
 import Contact from '../sections/Contact';
+import Certifications from '../sections/Certifications';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <About />
         <Skills />
         <Projects />
+        <Certifications />
         <Experience />
         <Contact />
       {/* </div> */}
@@ -20,4 +22,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home;

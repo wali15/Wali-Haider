@@ -10,6 +10,8 @@ import Experience from './components/sections/Experience';
 import Contact from './components/sections/Contact';
 import Resume from './components/pages/Resume';
 import { useState, useEffect } from 'react';
+import Certifications from './components/sections/Certifications';
+import PdfViewer from './components/pages/PdfViewer';
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -33,6 +35,8 @@ function App() {
         <Route path="/experience" element={<Experience />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/certifications" element={<Certifications />} />
+        <Route path="/pdf-viewer/:pdfUrl" element={<PdfViewer />} />
       </Routes>
       <Footer />
     </div>
