@@ -67,7 +67,6 @@ body {
 section {
   background-color: var(--section-bg);
   color: var(--text-color);
-  padding: 4rem 0;
   transition: all 0.3s ease;
   width: 100%;
 }
@@ -80,16 +79,16 @@ section {
 }
 
 @media (max-width: 768px) {
-  :root {
+  /* :root {
     --section-padding: 2rem 1rem;
-  }
+  } */
   
   body {
     overflow-x: hidden;
   }
 
   section {
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
     width: 100%;
     overflow-x: hidden;
   }
@@ -134,9 +133,9 @@ section {
 }
 
 @media (max-width: 480px) {
-  section {
+  /* section {
     padding: 1.5rem 0;
-  }
+  } */
   
   .container {
     padding: 0 0.8rem;
@@ -162,7 +161,7 @@ section {
 section {
   background-color: var(--section-bg);
   color: var(--text-color);
-  padding: 4rem 0;
+  /* padding: 4rem 0; */
   transition: all 0.3s ease;
   width: 100%;
 } 

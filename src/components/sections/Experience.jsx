@@ -8,7 +8,7 @@ const Experience = () => {
   const isStandalone = window.location.pathname === '/experience';
   
   return (
-    <div className={isStandalone ? "page-wrapper" : ""}>
+    <div style={{marginTop:"3rem"}}className={isStandalone ? "page-wrapper" : ""}>
       <section className="experience" id="experience">
         <div className="experience-container">
           <h2>Work Experience</h2>

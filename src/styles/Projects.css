@@ -2,7 +2,7 @@
   background-color: var(--section-bg);
   min-height: 100vh;
   padding-top: 80px;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
   width: 100%;
   overflow-x: hidden;
 }
@@ -284,7 +284,7 @@
 
 .projects-section {
   background-color: var(--section-bg);
-  padding: var(--section-padding);
+  /* padding: var(--section-padding); */
   min-height: 100vh;
   width: 100%;
 } 
