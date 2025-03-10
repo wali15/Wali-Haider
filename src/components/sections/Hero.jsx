@@ -10,7 +10,7 @@ const Hero = () => {
         <h2>{heroData.title}</h2>
         <p>{heroData.description}</p>
         <div className="cta-buttons">
-          <Link to="/resume" className="primary-btn">View My Resume</Link>
+          <Link to="/resume" className="primary-btn">VIEW MY RESUME</Link>
           <Link to="/contact" className="secondary-btn">Contact Me</Link>
         </div>
       </div>

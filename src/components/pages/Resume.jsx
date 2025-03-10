@@ -9,7 +9,7 @@ const Resume = () => {
       <section className="resume" id="resume">
         <div className="resume-container">
           <iframe
-            src="/SyedWaliHaiderResume.pdf"
+            src="/SyedWaliHaider(resume).pdf"
             title="Resume"
             className="resume-frame"
           />
