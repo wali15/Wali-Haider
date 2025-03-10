@@ -75,7 +75,7 @@ const Footer = () => {
             <h3>Contact Info</h3>
             <div className="contact-details">
               <p><strong>Email:</strong> walihaiderofficial@outlook.com</p>
-              <p><strong>Phone:</strong> +92 346 7002245</p>
+              <p><strong>Phone:</strong> +92 325 7262793</p>
               <div className="social-buttons">
                 <a 
                   href="https://github.com/wali15" 
