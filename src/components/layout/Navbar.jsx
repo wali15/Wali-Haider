@@ -32,7 +32,7 @@ const Navbar = ({ theme, setTheme }) => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/SyedWaliHaiderResume.pdf';
+    link.href = '/SyedWaliHaider(resume).pdf';
     link.download = 'Syed Wali Haider-Resume.pdf';
     document.body.appendChild(link);
     link.click();
